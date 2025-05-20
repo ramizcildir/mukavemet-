@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Örnek S-N verileri (Stress in MPa, N = Number of Cycles)
+stress_levels = [500, 400, 350, 300, 250, 200, 180, 160, 150]
+cycle_counts = [1e3, 1e4, 5e4, 1e5, 2e5, 5e5, 1e6, 5e6, 1e7]
+
+# Grafiği çiz
+plt.figure(figsize=(10, 6))
+plt.plot(cycle_counts, stress_levels, marker='o', linestyle='-', color='b', label='Wöhler Eğrisi')
+
+# Eksenleri logaritmik ve doğru şekilde ayarla
+plt.xscale('log')  # N (cycle) ekseni logaritmik
+
+# Başlık ve etiketler
+plt.title("Wöhler (S-N) Eğrisi")
+plt.xlabel("Yükleme Döngüsü Sayısı (N)")
+plt.ylabel("Gerilme (MPa)")
+plt.grid(True, which="both", linestyle="--", linewidth=0.5)
+plt.legend()
+plt.tight_layout()
+
+# Göster
+plt.show()
