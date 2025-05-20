@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+
+# Alüminyum için örnek veriler
+stress_levels = [250, 200, 175, 150, 130, 110, 100]  # MPa
+cycle_counts = [1e3, 1e4, 1e5, 5e5, 1e6, 5e6, 1e7]   # döngü sayısı
+
+# Wöhler eğrisi çizimi
+plt.figure(figsize=(10, 6))
+plt.plot(cycle_counts, stress_levels, marker='o', linestyle='-', color='orange', label='Alüminyum S-N Eğrisi')
+
+# Eksen ayarları
+plt.xscale('log')
+plt.xlabel("Yükleme Döngüsü Sayısı (N)")
+plt.ylabel("Gerilme (MPa)")
+plt.title("Alüminyum için Wöhler (S-N) Eğrisi")
+plt.grid(True, which="both", linestyle="--", linewidth=0.5)
+plt.legend()
+plt.tight_layout()
+plt.show()
