@@ -1,0 +1,2 @@
+# mukavemet-
+mukavemet, statik
